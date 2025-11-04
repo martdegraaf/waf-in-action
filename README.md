@@ -62,27 +62,29 @@ Based on our successful deployment experience, use these verified steps:
    ```
 
 3. **Build and Deploy Container App:**
-   ```bash
-   # Navigate to application directory
-   cd waf-testing-app
-   
-   # Build and push to ACR (replace with your actual ACR name)
-   az acr build --registry acrdemoagwdemovads3dyj \
-     --image waf-testing-app:v2 .
-   
-   # Update Container App with new image
-   az containerapp update \
-     --name ca-agwdemo-vads3dyjksiac \
-     --resource-group rg-agwdemo-vads3dyjksiac \
-     --image acrdemoagwdemovads3dyj.azurecr.io/waf-testing-app:v2
-   ```
+
+```bash
+# Navigate to application directory
+cd waf-testing-app
+
+# Build and push to ACR (replace with your actual ACR name)
+az acr build --registry acrdemoagwdemovads3dyj \
+  --image waf-testing-app:v2 .
+
+# Update Container App with new image
+az containerapp update \
+  --name ca-agwdemo-vads3dyjksiac \
+  --resource-group rg-agwdemo-vads3dyjksiac \
+  --image acrdemoagwdemovads3dyj.azurecr.io/waf-testing-app:v2
+```
 
 4. **Verify Deployment:**
-   ```bash
-   # Test the deployment
-   $url = "http://agw-agwdemo-vads3dyjksiac.hhgqashgc9ctazfc.westeurope.sysgen.cloudapp.azure.com/"
-   Invoke-WebRequest -Uri $url -UseBasicParsing
-   ```
+
+```bash
+# Test the deployment
+$url = "http://agw-agwdemo-vads3dyjksiac.hhgqashgc9ctazfc.westeurope.sysgen.cloudapp.azure.com/"
+Invoke-WebRequest -Uri $url -UseBasicParsing
+```
 
 ### Deployment Issues & Solutions
 
