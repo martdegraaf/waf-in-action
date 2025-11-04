@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "waf-testing-app": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:50161;http://localhost:50162"
+    }
+  }
+}
