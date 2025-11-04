@@ -18,10 +18,6 @@ This demo showcases a complete Azure security solution using:
 
 ## 🏗️ Architecture
 
-```
-Internet → Application Gateway (WAF) → Container App (.NET API) → Azure Container Registry
-```
-
 ![Architecture of the demo](demo.drawio.svg)
 
 ### Components:
